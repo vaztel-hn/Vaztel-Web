@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pedidos | Vaztel.hn</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    :root {
+      --bg: #0f0f0f;
+      --panel: #1a1a1a;
+      --text: #ffffff;
+      --muted: #cfcfcf;
+      --accent: #1d80b9;
+      --accent-dark: #0f5a82;
+      --radius: 16px;
+      --shadow: 0 6px 15px rgba(0,0,0,0.5);
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+    }
+
+    /* Hero sin barra */
+    .hero {
+      background: url('images/encabezado.png') center/cover no-repeat;
+      text-align: center;
+      padding: 160px 20px 100px;
+      position: relative;
+      isolation: isolate;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.6);
+      z-index: -1;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto 30px;
+      color: var(--muted);
+    }
+
+    .btn-main {
+      display: inline-block;
+      padding: 14px 28px;
+      border-radius: 30px;
+      background: var(--accent);
+      color: var(--text);
+      font-weight: bold;
+      text-decoration: none;
+      transition: background .3s ease, transform .2s ease;
+    }
+
+    .btn-main:hover {
+      background: var(--accent-dark);
+      transform: translateY(-3px);
+    }
+
+    /* Sección Pedidos */
+    .pedidos {
+      max-width: 1200px;
+      margin: 60px auto;
+      padding: 0 20px;
+      text-align: center;
+    }
+
+    .pedidos h2 {
+      color: var(--accent);
+      margin-bottom: 20px;
+      font-size: 2rem;
+    }
+
+    .pedidos p {
+      color: var(--muted);
+      margin-bottom: 40px;
+      font-size: 1.1rem;
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+
+    .step {
+      background: var(--panel);
+      padding: 25px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      transition: transform .25s ease;
+    }
+
+    .step:hover { transform: translateY(-6px); }
+
+    .step h3 {
+      margin-bottom: 10px;
+      color: var(--accent);
+    }
+
+    /* Botón volver */
+    .volver {
+      text-align: center;
+      margin: 50px 0;
+    }
+
+    .volver a {
+      padding: 12px 25px;
+      border-radius: 30px;
+      background: var(--accent);
+      color: var(--text);
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+
+    .volver a:hover {
+      background: var(--accent-dark);
+    }
+
+    /* Footer */
+    .footer {
+      background: #121212;
+      color: var(--text);
+      padding: 40px 20px;
+    }
+
+    .footer-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 22px;
+    }
+
+    .footer-box h3 {
+      color: var(--accent);
+      margin-bottom: 12px;
+    }
+
+    .social-buttons {
+      display: flex;
+      gap: 10px;
+    }
+
+    .btn-social {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: #2b2b2b;
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      transition: transform .2s ease, background .25s ease;
+    }
+
+    .btn-social:hover { transform: scale(1.06); }
+    .btn-social.facebook:hover { background: #1877f2; }
+    .btn-social.instagram:hover { background: #d62976; }
+    .btn-social.whatsapp:hover { background: #25d366; }
+
+    .copy {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 13px;
+      color: #9a9a9a;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 2rem; }
+      .hero p { font-size: 1rem; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header sin barra -->
+  <header class="hero">
+    <div class="hero-content container">
+      <h1>Haz tu Pedido</h1>
+      <p>Completa tu solicitud de productos y servicios de manera rápida y segura. ¡Estamos listos para atenderte!</p>
+      <a href="https://forms.office.com/r/hma19jpcRR" target="_blank" class="btn-main">Ir al Formulario</a>
+    </div>
+  </header>
+
+  <!-- Sección Pedidos -->
+  <section class="pedidos">
+    <h2>Cómo funciona</h2>
+    <p>Realizar tu pedido en Vaztel.hn es sencillo. Sigue estos pasos y tendrás tu producto en poco tiempo.</p>
+    <div class="steps">
+      <div class="step">
+        <h3>1. Selecciona</h3>
+        <p>Elige el producto o servicio que necesitas de nuestro catálogo.</p>
+      </div>
+      <div class="step">
+        <h3>2. Completa el Formulario</h3>
+        <p>Accede al formulario en línea y llena tus datos de contacto y pedido.</p>
+      </div>
+      <div class="step">
+        <h3>3. Confirmación</h3>
+        <p>Recibirás un mensaje de confirmación con los detalles de tu solicitud.</p>
+      </div>
+      <div class="step">
+        <h3>4. Entrega</h3>
+        <p>Tu pedido será entregado rápidamente en San Pedro Sula o cualquier parte de Honduras.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Botón volver -->
+  <div class="volver">
+    <a href="index.html">← Volver al Inicio</a>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content container">
+      <div class="footer-box">
+        <h3>Sobre Nosotros</h3>
+        <p>Vaztel.hn es tu aliado en tecnología, ofreciendo productos originales y soporte confiable.</p>
+      </div>
+      <div class="footer-box">
+        <h3>Síguenos</h3>
+        <div class="social-buttons">
+          <a href="#" class="btn-social facebook">F</a>
+          <a href="#" class="btn-social instagram">I</a>
+          <a href="#" class="btn-social whatsapp">W</a>
+        </div>
+      </div>
+    </div>
+    <div class="copy">© 2025 Vaztel.hn - Todos los derechos reservados</div>
+  </footer>
+</body>
+</html>

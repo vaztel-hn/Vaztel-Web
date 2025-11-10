@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contacto | Vaztel.hn</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    :root {
+      --bg: #0f0f0f;
+      --panel: #1a1a1a;
+      --text: #ffffff;
+      --muted: #cfcfcf;
+      --accent: #1d80b9;
+      --accent-dark: #0f5a82;
+      --radius: 16px;
+      --shadow: 0 6px 15px rgba(0,0,0,0.5);
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+    }
+
+    /* Hero */
+    .hero {
+      background: url('images/contacto.png') center/cover no-repeat;
+      text-align: center;
+      padding: 100px 20px;
+      position: relative;
+      isolation: isolate;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.6);
+      z-index: -1;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto 30px;
+      color: var(--muted);
+    }
+
+    /* Contact Section */
+    .contact {
+      max-width: 1000px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+
+    .contact h2 {
+      color: var(--accent);
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 2rem;
+    }
+
+    .contact p {
+      color: var(--muted);
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 1.1rem;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+    }
+
+    .card {
+      background: var(--panel);
+      padding: 25px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      transition: transform .25s ease;
+    }
+
+    .card:hover { transform: translateY(-6px); }
+
+    .card h3 {
+      margin-bottom: 10px;
+      color: var(--accent);
+    }
+
+    .card a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    /* Formulario */
+    .contact-form {
+      background: var(--panel);
+      padding: 30px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      margin-top: 40px;
+    }
+
+    .contact-form h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: var(--accent);
+    }
+
+    .contact-form form {
+      display: grid;
+      gap: 20px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 12px;
+      border-radius: 8px;
+      border: none;
+      background: #2a2a2a;
+      color: var(--text);
+      font-size: 1rem;
+    }
+
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      outline: 2px solid var(--accent);
+    }
+
+    .contact-form button {
+      padding: 14px;
+      border-radius: 30px;
+      background: var(--accent);
+      color: var(--text);
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+      transition: background .3s ease, transform .2s ease;
+    }
+
+    .contact-form button:hover {
+      background: var(--accent-dark);
+      transform: translateY(-2px);
+    }
+
+    /* Botón volver */
+    .volver {
+      text-align: center;
+      margin: 50px 0;
+    }
+
+    .volver a {
+      padding: 12px 25px;
+      border-radius: 30px;
+      background: var(--accent);
+      color: var(--text);
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+
+    .volver a:hover {
+      background: var(--accent-dark);
+    }
+
+    /* Footer */
+    .footer {
+      background: #121212;
+      color: var(--text);
+      padding: 40px 20px;
+    }
+
+    .footer-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 22px;
+    }
+
+    .footer-box h3 {
+      color: var(--accent);
+      margin-bottom: 12px;
+    }
+
+    .social-buttons {
+      display: flex;
+      gap: 10px;
+    }
+
+    .btn-social {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: #2b2b2b;
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      transition: transform .2s ease, background .25s ease;
+    }
+
+    .btn-social:hover { transform: scale(1.06); }
+    .btn-social.facebook:hover { background: #1877f2; }
+    .btn-social.instagram:hover { background: #d62976; }
+    .btn-social.whatsapp:hover { background: #25d366; }
+
+    .copy {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 13px;
+      color: #9a9a9a;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 2rem; }
+      .hero p { font-size: 1rem; }
+      .navbar ul { flex-direction: column; gap: 10px; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="hero">
+    <div class="menu container">
+      <a href="index.html" class="logo">Vaztel.hn</a>
+      <nav class="navbar">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="servicios.html">Servicios</a></li>
+          <li><a href="pedidos.html">Pedidos</a></li>
+          <li><a href="contacto.html" class="active">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="hero-content container">
+      <h1>Contáctanos</h1>
+      <p>Estamos aquí para ayudarte. Escríbenos, llámanos o completa el formulario en línea.</p>
+    </div>
+  </header>
+
+  <!-- Contact Section -->
+  <section class="contact">
+    <h2>Información de Contacto</h2>
+    <p>Elige el medio que prefieras para comunicarte con nosotros. ¡Siempre respondemos rápido!</p>
+
+    <div class="cards">
+      <div class="card">
+        <h3>Correo Electrónico</h3>
+        <p><a href="mailto:vaztel.hn@hotmail.com">vaztel.hn@hotmail.com</a></p>
+      </div>
+      <div class="card">
+        <h3>Teléfono</h3>
+        <p><a href="tel:+50493617113">+504 9361-7113</a></p>
+      </div>
+      <div class="card">
+        <h3>WhatsApp</h3>
+        <p><a href="https://wa.me/50493617113" target="_blank">Chatea con nosotros</a></p>
+      </div>
+    </div>
+
+    <!-- Formulario de contacto -->
+    <div class="contact-form">
+      <h2>Envíanos un mensaje</h2>
+      <form action="mailto:vaztel.hn@hotmail.com" method="post" enctype="text/plain">
+        <input type="text" name="nombre" placeholder="Tu nombre" required>
+        <input type="email" name="correo" placeholder="Tu correo electrónico" required>
+        <textarea name="mensaje" rows="5" placeholder="Escribe tu mensaje aquí..." required></textarea>
+        <button type="submit">Enviar Mensaje</button>
+      </form>
+    </div>
+    <!-- Botón volver -->
+    <div class="volver">
+      <a href="index.html">← Volver al Inicio</a>

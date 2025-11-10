@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Servicios | Vaztel.hn</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Estilos generales */
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #0f0f0f;
+      color: #fff;
+    }
+
+    /* Header / Hero sin menú */
+    .hero {
+      background: url('images/encabezado.png') center/cover no-repeat;
+      color: #fff;
+      text-align: center;
+      padding: 160px 20px 100px;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .buttons .btn-1, .buttons .btn-2 {
+      padding: 12px 25px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 5px;
+      display: inline-block;
+    }
+
+    .btn-1 {
+      background: #1d80b9;
+      color: #fff;
+    }
+
+    .btn-2 {
+      background: #fff;
+      color: #1d80b9;
+    }
+
+    /* Servicios */
+    .services {
+      margin: 60px auto;
+      max-width: 1200px;
+      text-align: center;
+      padding: 0 20px;
+    }
+
+    .services h2 {
+      color: #1d80b9;
+      margin-bottom: 20px;
+      font-size: 2rem;
+    }
+
+    .intro {
+      color: #ccc;
+      margin-bottom: 40px;
+      font-size: 1.1rem;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      justify-items: center;
+    }
+
+    .card {
+      background: #1a1a1a;
+      color: #fff;
+      padding: 25px;
+      border-radius: 15px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.5);
+      max-width: 320px;
+    }
+
+    .card img {
+      max-width: 80px;
+      margin-bottom: 15px;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.6);
+    }
+
+    /* Botón volver */
+    .volver {
+      text-align: center;
+      margin: 40px 0;
+    }
+
+    .volver a {
+      padding: 12px 25px;
+      border-radius: 30px;
+      background: #1d80b9;
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+
+    .volver a:hover {
+      background: #0f5a82;
+    }
+
+    /* Footer */
+    .footer {
+      background: #121212;
+      color: #fff;
+      padding: 40px 20px;
+    }
+
+    .footer-content {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: space-between;
+    }
+
+    .footer-box h3 {
+      margin-bottom: 15px;
+      color: #1d80b9;
+    }
+
+    .social-buttons {
+      display: flex;
+      gap: 10px;
+    }
+
+    .btn-social {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: #333;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      transition: background 0.3s ease, transform 0.3s ease;
+    }
+
+    .btn-social.facebook:hover { background: #1877f2; transform: scale(1.1); }
+    .btn-social.instagram:hover { background: #d62976; transform: scale(1.1); }
+    .btn-social.whatsapp:hover { background: #25d366; transform: scale(1.1); }
+
+    .copy {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 0.9rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 2rem; }
+      .hero p { font-size: 1rem; }
+      .footer-content { flex-direction: column; align-items: center; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Encabezado sin barra -->
+  <header class="hero">
+    <div class="hero-content container">
+      <h1>Servicios Profesionales</h1>
+      <p>Soluciones tecnológicas confiables y personalizadas para cada cliente en Honduras.</p>
+      <div class="buttons">
+        <a href="contacto.html" class="btn-1">Solicitar Servicio</a>
+        <a href="pedidos.html" class="btn-2">Solicitar Pedido</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Sección de Servicios -->
+  <main class="services">
+    <h2>Nuestros Servicios</h2>
+    <p class="intro">En Vaztel.hn ofrecemos una gama completa de servicios para que tu experiencia tecnológica sea segura, rápida y eficiente.</p>
+
+    <div class="cards">
+      <div class="card">
+        <img src="images/mantenimientos.png" alt="Servicio Técnico">
+        <h3>Servicio Técnico</h3>
+        <p>Mantenimiento preventivo y correctivo para computadoras y laptops. Diagnóstico rápido y soluciones efectivas.</p>
+      </div>
+
+      <div class="card">
+        <img src="images/licencias.png" alt="Licencias Digitales">
+        <h3>Licencias Digitales</h3>
+        <p>Instalación y activación de software original: Office, Windows, Antivirus y más, con soporte remoto.</p>
+      </div>
+
+      <div class="card">
+        <img src="images/gaming.png" alt="Gaming">
+        <h3>Optimización Gaming</h3>
+        <p>Configuración de PCs y consolas para máximo rendimiento en videojuegos y streaming.</p>
+      </div>
+
+      <div class="card">
+        <img src="images/celulares.png" alt="Smartphones">
+        <h3>Smartphones</h3>
+        <p>Venta de celulares originales y garantizados, con asesoría personalizada para elegir el mejor modelo.</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Botón volver -->
+  <div class="volver">
+    <a href="index.html">← Volver al Inicio</a>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content container">
+      <div class="footer-box">
+        <h3>Contacto</h3>
+        <p>Correo: vaztel.hn@hotmail.com</p>
+        <p>Teléfono: +504 9361-7113</p>
+        <p>WhatsApp: Chatea con nosotros</p>
+      </div>
+      <div class="footer-box">
+        <h3>Síguenos</h3>
+        <div class="social-buttons">
+          <a href="#" class="btn-social facebook">F</a>
+          <a href="#" class="btn-social instagram">I</a>
+          <a href="#" class="btn-social whatsapp">W</a>
+        </div>
+      </div>
+    </div>
+    <div class="copy">© 2025 Vaztel.hn - Todos los derechos reservados</div>
+  </footer>
+</body>
+</html>

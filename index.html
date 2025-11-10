@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vaztel.hn</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="menu container"> <a href="#" class="logo">Vaztel.hn</a> <input type="checkbox" id="menu" /> <label
+                for="menu"> <img src="images/menu.png" class="menu-icono" alt="menu"> </label>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="servicios.html">Servicios</a></li>
+                    <li><a href="pedidos.html">Pedidos</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="submenu"> <img id="img-carrito" src="images/car.png" alt="car">
+                <div id="carrito">
+                    <table id="lista-carrito">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody> <!-- Productos se agregan dinámicamente --> </tbody>
+                    </table> <a href="#" id="vaciar-carrito" class="btn-3">Vaciar Carrito</a> <a
+                        href="https://www.paypal.com/ncp/payment/3T5797P8DJJN4" target="_self" id="paypal-btn"
+                        class="btn-3"> Realizar Pago </a>
+                    <div id="mensaje-total" class="mensaje-total"> Tu total a cancelar es: <span
+                            id="total-lempiras">L.0.00</span><span id="total-usd">USD 0.00</span> </div>
+                    <div id="cantidad-carrito" class="cantidad-carrito"> <span id="cantidad-total"> </span> </div>
+                </div>
+            </div>
+        </div>
+         <div class="header-content container">
+            <div class="header-txt"> <span>Bienvenido a nuestra tienda</span>
+                <h1>Sobre Vaztel</h1>
+                <p> En Vaztel.hn trabajamos con un solo objetivo: ofrecer lo mejor para cada cliente. Productos
+                    originales y garantizados Atención personalizada antes y después de la compra Entrega rápida en San
+                    Pedro Sula y todo Honduras Asistencia remota para instalación y configuración Actualizamos nuestras
+                    ofertas constantemente. </p>
+                <div class="buttons"> <a href="#" class="btn-1">informacion</a> <a href="#" class="btn-1">leer mas</a>
+                </div>
+            </div>
+            <div class="header-img"> <img src="images/encabezado.png" alt=""> </div>
+        </div>
+    </header>
+        <section class="oferts container">
+        <div class="ofert-1 b1">
+            <div class="ofert-txt">
+                <h3>Smarthphones</h3> <a href="#">Leer mas</a>
+            </div>
+            <div class="ofert-img"> <img src="images/celulares.png" alt=""> </div>
+        </div>
+            <div class="ofert-1 b2">
+            <div class="ofert-txt">
+                <h3>Servicio Tecnico Para Computadoras</h3> <a href="#">Leer mas</a>
+            </div>
+            <div class="ofert-img"> <img src="images/mantenimientos.png" alt=""> </div>
+        </div>
+            <div class="ofert-1 b4">
+            <div class="ofert-txt">
+                <h3>Licencias Digitales</h3> <a href="#">Leer mas</a>
+            </div>
+            <div class="ofert-img"> <img src="images/licencias.png" alt=""> </div>
+        </div>
+            <div class="ofert-1 b3">
+            <div class="ofert-txt">
+                <h3>VideoJuegos</h3> <a href="#">Leer mas</a>
+            </div>
+            <div class="ofert-img"> <img src="images/gaming.png" alt=""> </div>
+        </div>
+    </section>
+        <main class="products container">
+            <h2>Productos</h2>
+            <div class="box-container" id="lista-1">
+             <div class="box"> <img src="images/s22ultra.png" alt="">
+                <div class="product-txt">
+                    <h3>Samsung Galaxy S22 Ultra 128GB Ambas Redes - Excelente Estado</h3>
+                    <p>Descripcion</p>
+                    <p class="Precio">L.8.900</p> <a href="#" class="agregar-carrito btn-3" data-id="1">Agregar al
+                        Carrito</a>
+                </div>
+            </div>
+            <div class="box"> <img src="images/s22ultra.png" alt="">
+                <div class="product-txt">
+                    <h3>Samsung Galaxy S22 Ultra 256GB Ambas Redes - Excelente Estado</h3>
+                    <p>Descripcion</p>
+                    <p class="Precio">L.9.900</p> <a href="#" class="agregar-carrito btn-3" data-id="2">Agregar al
+                        Carrito</a>
+                </div>
+            </div>
+            <div class="box"> <img src="images/s22plus.png" alt="">
+                <div class="product-txt">
+                    <h3>Samsung Galaxy S22 Plus 128GB Ambas Redes - Excelente Estado</h3>
+                    <p>Descripcion</p>
+                    <p class="Precio">L.6.799</p> <a href="#" class="agregar-carrito btn-3" data-id="3">Agregar al
+                        Carrito</a>
+                </div>
+            </div>
+            <div class="box"> <img src="images/s22plus.png" alt="">
+                <div class="product-txt">
+                    <h3>Samsung Galaxy S22 Plus 256GB Ambas Redes - Excelente Estado</h3>
+                    <p>Descripcion</p>
+                    <p class="Precio">L.7.000</p> <a href="#" class="agregar-carrito btn-3" data-id="4">Agregar al
+                        Carrito</a>
+                </div>
+            </div>
+        </div>
+        <div class="btn-2" id="load-more">Cargar Mas</div>
+    </main>
+    <section class="testimonial container"> <span></span>
+        <h2>Que opinan nuestros clientes</h2>
+        <div class="testimonial-content">
+            <div class="testimonial-1"> <img src="images/starts.png" alt="">
+                <p>Excelente servicio y productos de alta calidad. Estoy muy satisfecho con mi compra.</p>
+                <h3>Sofia Vasquez Borjas</h3> <span>Cliente Satisfecho</span>
+            </div>
+            <div class="testimonial-box"> <img src="images/starts.png" alt="">
+                <p>La atención al cliente fue excepcional. Me ayudaron a elegir el producto perfecto para mis
+                    necesidades.</p>
+                <h3>Kelin Borjas</h3> <span>Cliente Feliz</span>
+            </div>
+            <div class="testimonial-box"> <img src="images/starts.png" alt="">
+                <p>Entrega rápida y productos originales. Definitivamente volveré a comprar aquí.</p>
+                <h3>Jose Efrain Vasquez</h3> <span>Cliente Recurrente</span>
+            </div>
+        </div>
+    </section>
+     <footer class="footer">
+        <div class="footer-content container">
+            <div class="link">
+                <h3>Sobre Nosotros</h3>
+                <ul>
+                    <li><a href="#">Nuestra Historia</a></li>
+                    <li><a href="#">Mision y Vision</a></li>
+                    <li><a href="#">Terminos y Condiciones</a></li>
+                    <li><a href="#">Politica de Privacidad</a></li>
+                </ul>
+            </div>
+            <div class="footer-box">
+                <h3>Enlaces Rapidos</h3>
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Servicios</a></li>
+                    <li><a href="#">Productos</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-box">
+                <h3>Contacto</h3>
+                <p>Direccion: San Pedro Sula, Honduras</p>
+                <p>Telefono: +504 9361-7113</p>
+                <p>Email: vaztel.hn@hotmail.com</p>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
